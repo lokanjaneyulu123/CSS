@@ -1,0 +1,1518 @@
+<!-- CSS Font Descriptors
+The following table lists all the font descriptors that can be defined inside the @font-face rule:
+
+Descriptor	Values	Description
+
+font-family	name	Required. Defines a name for the font
+src	URL	Required. Defines the URL of the font file
+
+font-stretch	normal
+condensed
+ultra-condensed
+extra-condensed
+semi-condensed
+expanded
+semi-expanded
+extra-expanded
+ultra-expanded	Optional. Defines how the font should be stretched. Default is "normal"
+
+font-style	normal
+italic
+oblique	Optional. Defines how the font should be styled. Default is "normal"
+
+font-weight	normal
+bold
+100
+200
+300
+400
+500
+600
+700
+800
+900	Optional. Defines the boldness of the font. Default is "normal"
+
+unicode-range	unicode-range	Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF" -->
+
+
+
+
+
+<!-- Different Font Formats
+TrueType Fonts (TTF)
+
+TrueType is a font standard developed in the late 1980s, by Apple and Microsoft. TrueType is the most common font format for both the Mac OS and Microsoft Windows operating systems.
+
+OpenType Fonts (OTF)
+
+OpenType is a format for scalable computer fonts. It was built on TrueType, and is a registered trademark of Microsoft. OpenType fonts are used commonly today on the major computer platforms.
+
+The Web Open Font Format (WOFF)
+
+WOFF is a font format for use in web pages. It was developed in 2009, and is now a W3C Recommendation. WOFF is essentially OpenType or TrueType with compression and additional metadata. The goal is to support font distribution from a server to a client over a network with bandwidth constraints.
+
+The Web Open Font Format (WOFF 2.0)
+
+TrueType/OpenType font that provides better compression than WOFF 1.0.
+
+SVG Fonts/Shapes
+
+SVG fonts allow SVG to be used as glyphs when displaying text. The SVG 1.1 specification define a font module that allows the creation of fonts within an SVG document. You can also apply CSS to SVG documents, and the @font-face rule can be applied to text in SVG documents.
+
+Embedded OpenType Fonts (EOT)
+
+EOT fonts are a compact form of OpenType fonts designed by Microsoft for use as embedded fonts on web pages. -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_bold.woff);
+   font-weight: bold;
+}
+
+* {
+   font-family: myFirstFont;
+}
+</style>
+</head>
+<body>
+
+<h1>The @font-face Rule</h1>
+
+<div>
+With CSS, websites can use <b>fonts other than the pre-selected "web-safe" fonts</b>.
+</div>
+
+<p><b>Note:</b> Internet Explorer 8 and earlier, do not support the @font-face rule.</p>
+
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style> 
+@font-face {
+   font-family: myFirstFont;
+   src: url(sansation_light.woff);
+}
+
+* {
+   font-family: myFirstFont;
+}
+</style>
+</head>
+<body>
+
+<h1>The @font-face Rule</h1>
+
+<div>
+With CSS, websites can use fonts other than the pre-selected "web-safe" fonts.
+</div>
+
+<p><b>Note:</b> Internet Explorer 8 and earlier, do not support the @font-face rule.</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- All CSS Font Properties
+Property	Description
+font	Sets all the font properties in one declaration
+font-family	Specifies the font family for text
+font-size	Specifies the font size of text
+font-style	Specifies the font style for text
+font-variant	Specifies whether or not a text should be displayed in a small-caps font
+font-weight	Specifies the weight of a font -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic bold 12px/30px Georgia, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>The font Property</h1>
+
+<p class="a">This is a paragraph. The font size is set to 20 pixels, and the font family is Arial.</p>
+
+<p class="b">This is a paragraph. The font is set to italic and bold, the font size is set to 12 pixels, the line height is set to 30 pixels, and the font family is Georgia.</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+<style>
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Oswald, sans-serif;
+  font-size: 46px;
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
+<style>
+body {
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Spectral, serif;
+  font-size: 46px;
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli">
+<style>
+body {
+  font-family: Muli, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Space Mono", monospace;
+  font-size: 46px;
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
+<style>
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;  
+}
+
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 46px;  
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+<style>
+body {
+  font-family: 'Fauna One', serif;
+  font-size: 16px;  
+}
+
+h1 {
+  font-family: Cinzel, serif;
+  font-size: 46px;  
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+<style>
+body {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;  
+}
+
+h1 {
+  font-family: 'Abril Fatface', serif;
+  font-size: 46px;  
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+<style>
+body {
+  font-family: Lora, serif;
+  font-size: 16px;  
+}
+
+h1 {
+  font-family: Ubuntu, sans-serif;
+  font-size: 46px;  
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
+<style>
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Merriweather, serif;
+  font-size: 46px;
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Garamond, serif;
+  font-size: 16px;  
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 46px;  
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 46px;  
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html>  -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: black;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  color: gray;  
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Beautiful Norway</h1>
+
+<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with Denmark on the other side.</p>
+
+<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-neon">Neon Effect</h1>
+<h1 class="font-effect-outline">Outline Effect</h1>
+<h1 class="font-effect-emboss">Emboss Effect</h1>
+<h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-fire">Sofia on Fire</h1>
+<p class="font-effect-fire">Lorem ipsum dolor sit amet.</p>
+<p class="font-effect-fire">123456790</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px #ababab;
+}
+</style>
+</head>
+<body>
+
+<h1>Sofia Font</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>123456790</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- Note: Requesting multiple fonts may slow down your web pages! So be careful about that. -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+<style>
+h1.a {
+  font-family: "Audiowide", sans-serif;
+}
+
+h1.b {
+  font-family: "Sofia", sans-serif;
+}
+
+h1.c {
+  font-family: "Trirong", serif;
+}
+</style>
+</head>
+<body>
+
+<h1 class="a">Audiowide Font</h1>
+
+<h1 class="b">Sofia Font</h1>
+
+<h1 class="c">Trirong Font</h1>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<style>
+body {
+  font-family: "Audiowide", sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Audiowide Font</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>123456790</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+body {
+  font-family: "Trirong", serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Trirong Font</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>123456790</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Sofia Font</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+<p>123456790</p>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+<h1 style="font-size:10vw;">Responsive Text</h1>
+
+<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+
+<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+<p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>Specifying the font-size in percent and em displays the same size in all major browsers, and allows all browsers to resize the text!</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>Specifying the font-size in percent and em displays the same size in all major browsers, and allows all browsers to resize the text!</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  font-size: 2.5em; /* 40px/16=2.5em */
+}
+
+h2 {
+  font-size: 1.875em; /* 30px/16=1.875em */
+ }
+
+p {
+  font-size: 0.875em; /* 14px/16=0.875em */
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>Specifying the font-size in em allows all major browsers to resize the text.
+Unfortunately, there is still a problem with older versions of IE. When resizing the text, it becomes larger/smaller than it should.</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+</style>
+</head>
+<body>
+
+<p class="normal">My name is Hege Refsnes.</p>
+<p class="small">My name is Hege Refsnes.</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+p.normal {
+  font-weight: normal;
+}
+
+p.light {
+  font-weight: lighter;
+}
+
+p.thick {
+  font-weight: bold;
+}
+
+p.thicker {
+  font-weight: 900;
+}
+</style>
+</head>
+<body>
+
+<p class="normal">This is a paragraph.</p>
+<p class="light">This is a paragraph.</p>
+<p class="thick">This is a paragraph.</p>
+<p class="thicker">This is a paragraph.</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+</style>
+</head>
+<body>
+
+<p class="normal">This is a paragraph in normal style.</p>
+<p class="italic">This is a paragraph in italic style.</p>
+<p class="oblique">This is a paragraph in oblique style.</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Copperplate, Papyrus, fantasy;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: "Brush Script MT", cursive;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Georgia, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Garamond, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Georgia, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- Commonly Used Font Fallbacks
+Below are some commonly used font fallbacks, organized by the 5 generic font families:
+
+Serif
+Sans-serif
+Monospace
+Cursive
+Fantasy -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Brush Script MT', cursive;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Courier New', monospace;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Garamond, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Georgia, serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Times New Roman', serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Tahoma, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html> -->
+
+
+
+
+<!-- What are Web Safe Fonts?
+Web safe fonts are fonts that are universally installed across all browsers and devices.
+
+Fallback Fonts
+However, there are no 100% completely web safe fonts. There is always a chance that a font is not found or is not installed properly.
+
+Therefore, it is very important to always use fallback fonts.
+
+This means that you should add a list of similar "backup fonts" in the font-family property. If the first font does not work, the browser will try the next one, and the next one, and so on. Always end the list with a generic font family name.
+
+Best Web Safe Fonts for HTML and CSS
+The following list are the best web safe fonts for HTML and CSS:
+
+Arial (sans-serif)
+Verdana (sans-serif)
+Helvetica (sans-serif)
+Tahoma (sans-serif)
+Trebuchet MS (sans-serif)
+Times New Roman (serif)
+Georgia (serif)
+Garamond (serif)
+Courier New (monospace)
+Brush Script MT (cursive)
+-->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+font-family: Tahoma, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Fallback Fonts</h1>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html> -->
+
+
+
+
+
+<!-- Generic Font Families
+In CSS there are five generic font families:
+
+Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.
+Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.
+Monospace fonts - here all the letters have the same fixed width. They create a mechanical look. 
+Cursive fonts imitate human handwriting.
+Fantasy fonts are decorative/playful fonts.
+All the different font names belong to one of the generic font families
+
+Some Font Examples
+Generic Font Family	Examples of Font Names
+Serif	Times New Roman
+        Georgia
+        Garamond
+Sans-serif	Arial
+            Verdana
+            Helvetica
+Monospace	Courier New
+            Lucida Console
+            Monaco
+Cursive	Brush Script MT
+        Lucida Handwriting
+Fantasy	Copperplate
+        Papyrus             -->
+
+
+        <!-- <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        .p1 {
+          font-family: "Times New Roman", Times, serif;
+        }
+        
+        .p2 {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .p3 {
+          font-family: "Lucida Console", "Courier New", monospace;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <h1>CSS font-family</h1>
+        <p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
+        <p class="p2">This is a paragraph, shown in the Arial font.</p>
+        <p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+        
+        </body>
+        </html> -->
+        
